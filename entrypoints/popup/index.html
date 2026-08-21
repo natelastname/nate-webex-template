@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nate WebExtension Template</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header>
+        <p class="eyebrow">WebExtension quickstart</p>
+        <h1>Command console</h1>
+      </header>
+
+      <section class="card" aria-labelledby="page-heading">
+        <div class="section-heading">
+          <h2 id="page-heading">Active page</h2>
+          <span id="status" class="status" role="status">Loading…</span>
+        </div>
+        <p id="page-title" class="page-title">—</p>
+        <p id="page-url" class="page-url">—</p>
+
+        <div class="actions">
+          <button id="capture-selection" type="button">Capture selection</button>
+          <button id="duplicate-tab" type="button" class="secondary">Duplicate tab</button>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="selection-heading">
+        <div class="section-heading">
+          <h2 id="selection-heading">Last capture</h2>
+          <button id="clear-selection" type="button" class="text-button">Clear</button>
+        </div>
+        <blockquote id="selection-text" class="selection-text">Nothing captured yet.</blockquote>
+        <p id="selection-meta" class="selection-meta"></p>
+      </section>
+
+      <p class="hint">All privileged work is dispatched through the background context.</p>
+    </main>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
